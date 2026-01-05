@@ -125,12 +125,14 @@ function App() {
   return (
     <div
       style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        fontFamily: "Arial",
-        padding: "20px",
-      }}
+      minHeight: "100vh",
+      backgroundColor: "#ffffff",
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      fontFamily: "Arial",
+      padding: "20px",
+    }}
     >
       <h1>Pathfinding Visualizer</h1>
 
@@ -161,17 +163,21 @@ function App() {
                   handleMouseEnter(node.row, node.col)
                 }
                 style={{
-                  width: 25,
-                  height: 25,
-                  border: "1px solid #bbb",
+                  width: "25px",
+                  height: "25px",
+                  minWidth: "25px",
+                  minHeight: "25px",
+                  border: "1px solid black",
+                  display: "inline-block",
                   backgroundColor: node.isStart
                     ? "green"
                     : node.isEnd
                     ? "red"
                     : node.isWall
                     ? "black"
-                    : "white",
+                    : "#f5f5f5",
                 }}
+                
               />
             ))}
           </div>
